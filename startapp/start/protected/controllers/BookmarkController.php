@@ -98,7 +98,7 @@
       //Yii::import('ext.httpclient.*');
       //Yii::import('ext.httpclient.adapter.*');
       
-      $url = 'http://teeaich.kodingen.com/yii/start/index.php?r=bookmark/go';
+      $url = Yii::app()->getBasePath().'/start/index.php?r=bookmark/go';
       $client = new EHttpTouchClient($url,$httpClientConfig);
       $client->setParameterGet('_runaction_touch', 1);
       $client->request();
@@ -157,11 +157,11 @@
       
       if(isset($_POST['Bookmark']))
       {
-        
+        $url = Yii::app()->getBasePath().'/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
         $model->save();
         $postData = array ( 'link' => $model->link, 'id' => $model->id);
-        ERunActions::touchUrlExt('http://teeaich.kodingen.com/yii/start/index.php?r=bookmark/getPre_image',$postData);
+        ERunActions::touchUrlExt($url,$postData);
         /*if (ERunActions::runBackground(true))
         {
         
