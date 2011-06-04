@@ -185,7 +185,7 @@
       $client = new EHttpTouchClient($url,$httpClientConfig);
       
       $client->setParameterGet('_runaction_touch', 1);
-      $client->setCookie('PHPSESSID',Yii::app()->request->cookies[PHPSESSID]->value);
+      $client->setCookie('PHPSESSID',Yii::app()->request->cookies["PHPSESSID"]->value);
       
       $method = 'GET';
       if (!empty($postData))

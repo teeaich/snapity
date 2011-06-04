@@ -58,13 +58,19 @@
     
     public function actionGetPre_image()
     {
+      Yii::import('ext.webthumb.bluga.Autoload');
+      Yii::import('ext.webthumb.bluga.Webthumb');
       
       //$this->_link = 'http://www.google.de';
       //$this->_bid = 104;
-      $job = new webThumbJob($_POST['link']);
+      //$job = new webThumbJob($_POST['link']);
+            $job = new webThumbJob('http://www.google.de');
+
       
       $pre_image = $job->perform();
-      $model=Bookmark::model()->findByPk((int)$_POST['id']);   
+      //$model=Bookmark::model()->findByPk((int)$_POST['id']); 
+            $model=Bookmark::model()->findByPk((int)'86');   
+
       $model->pre_image = $pre_image;
       $model->save();
       
@@ -157,7 +163,11 @@
       
       if(isset($_POST['Bookmark']))
       {
-        $url = Yii::app()->getBasePath().'/start/index.php?r=bookmark/getpre_image';
+        $request = Yii::app()->request;
+        
+        //$host = $request->getHostInfo();
+        //$baseUrl =  "$host";
+        $url = 'http://localhost:8888/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
         $model->save();
         $postData = array ( 'link' => $model->link, 'id' => $model->id);
@@ -329,6 +339,7 @@
     */
     public function actionIndex()
     {
+
       Yii::import('ext.runactions.components.ERunActions');
       //ERunActions::touchUrlExt('http://teeaich.kodingen.com/yii/start/index.php?r=bookmark/runWorker');
       $dataProvider=new CActiveDataProvider(Bookmark::model()->userBookmarks());
