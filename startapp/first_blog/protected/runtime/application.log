@@ -1,0 +1,274 @@
+2011/04/24 07:17:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('gii')
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/first_blog/index.php?r=gii
+2011/04/24 07:18:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not allowed to access this page.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/gii/GiiModule.php:163
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(255): GiiModule->beforeControllerAction(Object(DefaultController), Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('gii')
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/first_blog/index.php?r=gii
+2011/04/24 07:47:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('User')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=User
+2011/04/24 08:05:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "User".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('User')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=User
+2011/04/24 08:07:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'k17663_2'@'localhost' (using password: YES)' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/CDbConnection.php:348
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/CDbConnection.php(297): CDbConnection->open()
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/CDbConnection.php(275): CDbConnection->setActive(true)
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CModule.php(372): CDbConnection->init()
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(426): CModule->getComponent('db')
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/ar/CActiveRecord.php(607): CApplication->getDb()
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/ar/CActiveRecord.php(2236): CActiveRecord->getDbConnection()
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/db/ar/CActiveRecord.php(371): CActiveRecordMetaData->__construct(Object(Post))
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CActiveDataProvider.php(72): CActiveRecord::model('Post')
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php(130): CActiveDataProvider->__construct('Post')
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/actions/CInlineAction.php(50): PostController->actionIndex()
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#13 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#14 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#17 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('')
+#19 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('Post')
+#20 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#21 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#22 {main} REQUEST_URI=/yii/first_blog/index.php?r=Post
+2011/04/25 13:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index
+2011/04/25 13:10:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('create')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=create
+2011/04/25 13:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('user')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=user
+2011/04/25 13:15:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('create')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=create
+2011/04/25 13:16:39 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:328
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/update')
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/update
+2011/04/25 13:32:41 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:328
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/update/1')
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/update/1
+2011/04/25 13:35:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php:189
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php(117): PostController->loadModel('7')
+#1 [internal function]: PostController->actionUpdate('7')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/actions/CAction.php(104): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/actions/CInlineAction.php(48): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#13 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/update')
+#14 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#15 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#16 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/update&id=7
+2011/04/25 13:41:33 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:328
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/update')
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/update
+2011/04/25 14:04:51 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:328
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(301): CController->invalidActionParams(Object(CInlineAction))
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('update')
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/update')
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#12 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/update
+2011/04/25 14:05:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('view')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=view
+2011/04/25 14:07:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('view')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=view
+2011/04/25 14:08:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('view')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=view
+2011/04/25 14:09:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('view')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=view
+2011/04/25 14:11:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php:202
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php(82): PostController->loadModel()
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/actions/CInlineAction.php(50): PostController->actionView()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('view')
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/view')
+#12 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#13 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#14 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/view&id=1
+2011/04/25 14:11:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php:202
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/protected/controllers/PostController.php(82): PostController->loadModel()
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/actions/CInlineAction.php(50): PostController->actionView()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(300): CInlineAction->runWithParams(Array)
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilter.php(41): CFilterChain->run()
+#5 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(1122): CFilter->filter(Object(CFilterChain))
+#6 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#7 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(283): CFilterChain->run()
+#9 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(257): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('view')
+#11 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/view')
+#12 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#13 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#14 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/view&id=1
+2011/04/25 14:27:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index
+2011/04/25 14:27:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.php".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index.php')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index.php
+2011/04/25 14:36:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index
+2011/04/25 14:36:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index.php".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index.php')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index.php
+2011/04/25 14:36:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "index".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('index')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=index
+2011/04/25 14:40:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('admin')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#3 {main} REQUEST_URI=/yii/first_blog/index.php?r=admin
+2011/04/26 03:32:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logi".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:477
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(262): CController->missingAction('logi')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('logi')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/logi')
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/first_blog/index.php?r=site/logi
+2011/05/02 13:24:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "c".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:477
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(262): CController->missingAction('c')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('c')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('post/c')
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/first_blog/index.php?r=post/c
+2011/05/02 13:27:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "logi".' in /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php:477
+Stack trace:
+#0 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CController.php(262): CController->missingAction('logi')
+#1 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(328): CController->run('logi')
+#2 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('site/logi')
+#3 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#4 /var/www/vhosts/teeaich.kodingen.com/httpdocs/yii/first_blog/index.php(13): CApplication->run()
+#5 {main} REQUEST_URI=/yii/first_blog/index.php?r=site/logi
