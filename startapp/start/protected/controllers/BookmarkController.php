@@ -58,84 +58,21 @@
     
     public function actionGetPre_image()
     {
-      Yii::import('ext.webthumb.bluga.Autoload');
-      Yii::import('ext.webthumb.bluga.Webthumb');
       
-      //$this->_link = 'http://www.google.de';
-      //$this->_bid = 104;
-      //$job = new webThumbJob($_POST['link']);
-            $job = new webThumbJob('http://www.google.de');
+      $job = new webThumbJob($_POST['link']);
+      //for debugging 
+      //$job = new webThumbJob('http://www.google.de');
 
       
       $pre_image = $job->perform();
-      //$model=Bookmark::model()->findByPk((int)$_POST['id']); 
-            $model=Bookmark::model()->findByPk((int)'86');   
+      $model=Bookmark::model()->findByPk((int)$_POST['id']); 
+      //for debugging
+      //$model=Bookmark::model()->findByPk((int)'87');   
 
       $model->pre_image = $pre_image;
       $model->save();
       
     }
-    public function actionGo()
-    
-    {
-      Yii::import('ext.runactions.components.ERunActions');
-      if (ERunActions::runBackground(true))
-      {
-        
-        echo 'geht ab2';
-        $id = '100';
-        $model=Bookmark::model()->findByPk((int)$id);   
-        $model->title = 'mitPre';
-        $this->getPre_image();
-        $model->save();
-      }
-      else 
-      {
-        echo 'jo ab';
-        
-        
-      }
-    }
-    public function actionTest()
-    {
-      Yii::import('ext.runactions.components.ERunActions');
-      Yii::import('ext.runactions.components.EHttpTouchClient');
-      
-      //Yii::import('ext.httpclient.*');
-      //Yii::import('ext.httpclient.adapter.*');
-      
-      $url = Yii::app()->getBasePath().'/start/index.php?r=bookmark/go';
-      $client = new EHttpTouchClient($url,$httpClientConfig);
-      $client->setParameterGet('_runaction_touch', 1);
-      $client->request();
-      //ERunActions::touchUrl($url,$postData=null,$contentType=null);
-      //ERunActions::runAction('bookmark/go',$params=array('wert'=>'hallo'),$ignoreFilters=false,
-      //$ignoreBeforeAfterAction=true,$logOutput=true,$silent=false);
-      //ERunActions::touchUrl($url,$postData=null,$contentType=null);
-      /*$request = Yii::app()->request;
-      
-      $uri = $request->requestUri;
-      $port = $request->getPort();
-      echo $host = $request->getHostInfo();
-      $url =  "$host:$port$uri";  
-      
-      Yii::import('ext.runactions.components.ERunActionsHttpClient');
-      $client = new ERunActionsHttpClient(true);
-      
-      $verb = empty($postData)? 'GET' : 'POST';
-      $getParams = array('_runaction_touch'=>1);
-      
-      $parts=parse_url($url);
-      $port = isset($parts['port']) ? $parts['port'] : 80;
-      echo $parts['host'].':'.$port.$parts['path'].'?r=bookmark/go';
-      echo $getParams['_runaction_touch'];
-      /*if( !$client->request($parts['host'],$port,$parts['path'],$verb,$getParams,$postData,$contentType))
-      {
-      echo $jo;
-    }else echo 'shit';
-      $client->request($parts['host'],$port,$parts['path'].$parts['query'],$verb,$getParams,$postData,$contentType);*/
-    }
-    
     
     public function actionRunWorker()
     {
@@ -165,25 +102,13 @@
       {
         $request = Yii::app()->request;
         
-        //$host = $request->getHostInfo();
-        //$baseUrl =  "$host";
-        $url = 'http://localhost:8888/start/index.php?r=bookmark/getpre_image';
+        $host = $request->getHostInfo();
+        $url = $host.'/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
         $model->save();
         $postData = array ( 'link' => $model->link, 'id' => $model->id);
         ERunActions::touchUrlExt($url,$postData);
-        /*if (ERunActions::runBackground(true))
-        {
         
-        $job = new webThumbJob($this->_link);
-        
-        $pre_image = $job->perform();
-        $model=Bookmark::model()->findByPk((int)$this->$_bid);   
-        $model->pre_image = $pre_image;
-        $model->save();
-      }
-        else
-        {*/
         
         if($model->validate())
         {
@@ -208,7 +133,6 @@
             'div'=>$this->renderPartial('_ajaxform', array('model'=>$model),true, true)));
           exit;               
         }
-        //echo 'model nicht saved';
         
       }
       
@@ -225,9 +149,7 @@
         
         exit;               
       }
-      // else
-      //echo 'kein ajax';
-      //  $this->render('create',array('model'=>$model,));
+      
       
       
     }
