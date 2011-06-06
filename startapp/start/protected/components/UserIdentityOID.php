@@ -9,6 +9,10 @@ class UserIdentityOID extends CUserIdentity
 {
     private $_id;
  
+    public function __construct()
+       {
+           
+       }
     public function shortRandomNumber()
     {
     $random = '';
@@ -49,36 +53,34 @@ class UserIdentityOID extends CUserIdentity
             {
             try 
                 {
-                  echo $loid->validate() ? 'Logged in.' : 'Failed';
+                  $loid->validate() ? 'Logged in.' : 'Failed';
                   $attributes = $loid->getAttributes();
-                  if (is_array($attributes)) echo 'get attrbites ok';
-                  echo $email = $attributes['contact/email'];
-                  if(!$this->checkEmail($email) )
-                  {
-                    echo 'email is ok';
+                  $email = $attributes['contact/email'];
+                  //if(!$this->checkEmail($email) ) at the moment not working/ check "checkEMail above
+                  
                     $newUsername = $attributes['contact/email'];
                     if ($model=User::model()->find('LOWER(username)=?',array($newUsername)))
                     {
-                      echo $this->_id=$model->getPrimaryKey();
-                      echo $this->username=$model->getAttribute('username');
+                      $this->_id=$model->getPrimaryKey();
+                      $this->username=$model->getAttribute('username');
                     }
                   
                     else 
                     {
                       $model = new User;
-                      echo $model->username=$attributes['contact/email'];
-                      echo $model->firstname=$attributes['namePerson/first'];
-                      echo $model->lastname=$attributes['namePerson/last'];
-                      echo $model->password=$model->hashPassword('test','28b206548469ce62182048fd9cf91760');
+                      $model->username=$attributes['contact/email'];
+                      $model->firstname=$attributes['namePerson/first'];
+                      $model->lastname=$attributes['namePerson/last'];
+                      $model->password=$model->hashPassword('test','28b206548469ce62182048fd9cf91760');
                       $model->salt='28b206548469ce62182048fd9cf91760';
                       $model->save();
-                      echo $this->_id=$model->getPrimaryKey();
-                      echo $this->username=$model->getAttribute('username');
+                      $this->_id=$model->getPrimaryKey();
+                      $this->username=$model->getAttribute('username');
                       /*if($model->save())
                       $this->redirect(array('view','id'=>$model->id));*/
                     }
                     
-                  }else echo 'keine valid email';
+                  
 
                       
                   
