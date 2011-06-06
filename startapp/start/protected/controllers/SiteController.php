@@ -91,12 +91,9 @@ class SiteController extends Controller
 
     if(isset($_POST['LoginForm']))
     {
-      //echo 'is post';
       $model->attributes=$_POST['LoginForm'];
-      //echo 'jo';
       
       
-      //echo 'done';
       if($model->validate() && $model->login())
 
         {
@@ -118,7 +115,6 @@ class SiteController extends Controller
               $this->renderPartial('login', array('model'=>$model),true, true));
             exit;               
           }
-      //echo 'model nicht saved';
     }
          
     
@@ -131,9 +127,7 @@ class SiteController extends Controller
 
             exit;               
         }
-    // else
-      //echo 'kein ajax';
-      //  $this->render('create',array('model'=>$model,));
+    
     
   }
     
@@ -148,13 +142,10 @@ class SiteController extends Controller
     // if it is ajax validation request
     if(isset($_POST['ajax']) && $_POST['ajax']==='login-form')
     {
-      echo 'im ajax post';
-      //echo CActiveForm::validate($model);
       $model->attributes=$_POST['login-form'];
       // validate user input and redirect to the previous page if valid
       if($model->validate() && $model->login())
       {
-         echo 'logged';
         //$this->redirect(Yii::app()->user->returnUrl);
                
 
@@ -168,15 +159,6 @@ class SiteController extends Controller
       Yii::app()->end();
     }
       
-    // collect user input data
-    /*if(isset($_POST['LoginForm']))
-    {
-      $model->attributes=$_POST['LoginForm'];
-      // validate user input and redirect to the previous page if valid
-      if($model->validate() && $model->login())
-        $this->redirect(Yii::app()->user->returnUrl);
-  }*/
-    // display the login form
     
     echo CJSON::encode(
     $this->renderPartial('login',array('model'=>$model),true,true));
