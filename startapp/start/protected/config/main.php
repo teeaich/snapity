@@ -3,7 +3,6 @@
  
 
 
-  //echo $_SERVER["REMOTE_ADDR"];
 
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
