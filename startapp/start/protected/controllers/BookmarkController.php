@@ -31,7 +31,8 @@
     {
       return array(
         array('allow',  // allow all users to perform 'index' and 'view' actions
-              'actions'=>array(),
+              // no action allowed at the moment for any non authenticated user
+              //'actions'=>array(),
               'users'=>array('*'),
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
