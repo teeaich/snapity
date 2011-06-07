@@ -74,7 +74,6 @@ class SiteController extends Controller
     
     $model=new LoginForm;
     $attributtes = $model->loginOpenID();
-    if ($attributtes) echo 'sind da';
     $this->redirect('index.php?r=bookmark');
     
     //Yii::app()->user;
