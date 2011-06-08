@@ -76,11 +76,11 @@ class Bookmark extends CActiveRecord
   
   /**
    * check the url whether a http is in front of it, otherwise it will append
+   * 
    */
 
   public function validateLink($link)
-  {
-      
+  {  
     if (!preg_match("@^https?://@i", $link) && !preg_match("@^ftps?://@i", $link)) {
         return  "http://".$link;
     }
@@ -110,6 +110,7 @@ class Bookmark extends CActiveRecord
         {
           $this->create_time=time();
           $this->user_bk_id=Yii::app()->user->id;
+          // link is checked by this function
           $this->link= $this->validateLink($this->link);
         }
         
