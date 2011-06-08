@@ -73,6 +73,20 @@ class Bookmark extends CActiveRecord
       'user' => array(self::BELONGS_TO, 'User', 'user_bk_id'),
     );
   }
+  
+  /**
+   * check the url whether a http is in front of it, otherwise it will append
+   */
+
+  public function validateLink($link)
+  {
+      
+    if (!preg_match("@^https?://@i", $link) && !preg_match("@^ftps?://@i", $link)) {
+        return  "http://".$link;
+    }
+    else return $link;
+}
+  
 
   /**
    * @return array customized attribute labels (name=>label)
@@ -95,7 +109,8 @@ class Bookmark extends CActiveRecord
         if($this->isNewRecord)
         {
           $this->create_time=time();
-          $this->user_bk_id=Yii::app()->user->id; 
+          $this->user_bk_id=Yii::app()->user->id;
+          $this->link= $this->validateLink($this->link);
         }
         
         return true;
