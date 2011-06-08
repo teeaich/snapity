@@ -104,7 +104,7 @@
         $request = Yii::app()->request;
         
         $host = $request->getHostInfo();
-        $url = $host.'/start/index.php?r=bookmark/getpre_image';
+        $url = $host.'/startapp/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
         $model->save();
         $postData = array ( 'link' => $model->link, 'id' => $model->id);
