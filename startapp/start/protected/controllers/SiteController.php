@@ -71,13 +71,15 @@ class SiteController extends Controller
   
   public function actionOpenId()
   {
-    
+    //$this->redirect('http://www.google.de');
     $model=new LoginForm;
-    $attributtes = $model->loginOpenID();
-    $this->redirect('index.php?r=bookmark');
+    $result = $model->loginOpenID();
+    if ($result == false)
+    {
+        $this->redirect('index.php?r=bookmark');
+    }
     
-    //Yii::app()->user;
-
+    else $this->redirect($result);
   }
 
   
