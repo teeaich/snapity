@@ -75,6 +75,18 @@ return array(
     */
     // uncomment the following to use a MySQL database
     
+    // for auzuli.org
+    /*
+    'db'=>array(
+      'connectionString' => 'mysql:host=mysql.azuli.org;dbname=u867754927_k1766',
+      'emulatePrepare' => true,
+      'username' => 'u867754927_k1766',
+      'password' => 'Betzepower01',
+      'charset' => 'utf8',
+      'tablePrefix' => 'tbl_',
+    ),
+    */
+    // for kodingen
     'db'=>array(
       'connectionString' => 'mysql:host=localhost;dbname=k17663_3',
       'emulatePrepare' => true,
