@@ -76,8 +76,7 @@ class UserIdentityOID extends CUserIdentity
                       $model->save();
                       $this->_id=$model->getPrimaryKey();
                       $this->username=$model->getAttribute('username');
-                      /*if($model->save())
-                      $this->redirect(array('view','id'=>$model->id));*/
+                      
                     }
                     
                   
@@ -86,7 +85,7 @@ class UserIdentityOID extends CUserIdentity
                   
                   
 
-                  return true;
+                  return false;
                   
                 }
              catch (Exception $e) 
@@ -108,8 +107,8 @@ class UserIdentityOID extends CUserIdentity
              if (empty($err)) {
                   try {
                     
-                    CController::redirect($loid->authUrl());
-                    
+                   // CController::redirect($loid->authUrl());
+                    return $loid->authUrl();
                       } catch (Exception $e) {
                         echo $err = Yii::t('core', $e->getMessage());
              
@@ -123,4 +122,3 @@ class UserIdentityOID extends CUserIdentity
         return $this->_id;
     }
 }
-
