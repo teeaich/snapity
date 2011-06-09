@@ -85,7 +85,7 @@ class Bookmark extends CActiveRecord
         return  "http://".$link;
     }
     else return $link;
-}
+  }
   
 
   /**

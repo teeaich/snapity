@@ -121,8 +121,10 @@ return array(
                //alias to dir, where you unpacked extension
     'class' => 'application.extensions.lightopenid.loid',
   ),
-    
-     
+   
+    'token'=>array(
+    'class' => 'application.extensions.Token', 
+        ),
   ),
 
   // application-level parameters that can be accessed

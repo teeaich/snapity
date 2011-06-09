@@ -32,11 +32,11 @@
       return array(
         array('allow',  // allow all users to perform 'index' and 'view' actions
               // no action allowed at the moment for any non authenticated user
-              //'actions'=>array(),
+              'actions'=>array('getPre_image'),
               'users'=>array('*'),
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
-              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view','go','test','getPre_image'),
+              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view','go','test'),
               'users'=>array('@'),
               
              ),
@@ -59,14 +59,15 @@
     
     public function actionGetPre_image()
     {
-      
-      $job = new webThumbJob($_POST['link']);
+      // First of all get the data (link and id) with the token bundled in the post request
+      $data = Yii::app()->token->validate('generate', $_POST['token']);
+      $job = new webThumbJob($data['link']);
       //for debugging 
       //$job = new webThumbJob('http://www.google.de');
 
       
       $pre_image = $job->perform();
-      $model=Bookmark::model()->findByPk((int)$_POST['id']); 
+      $model=Bookmark::model()->findByPk((int)$data['id']); 
       //for debugging
       //$model=Bookmark::model()->findByPk((int)'87');   
 
@@ -107,7 +108,23 @@
         $url = $host.'/startapp/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
         $model->save();
-        $postData = array ( 'link' => $model->link, 'id' => $model->id);
+        /*
+         * prepare an array to save the link and id from saved model in token table
+         */
+        $myData = array('link' => $model->link, 'id' => $model->id);
+        /*
+         *generate and get token with $myDate array 
+         */
+        $token = Yii::app()->token->create('generate', array(''), 172800, $myData);
+        /*
+         * generate array which has the token 
+         */
+        $postData = array ( 'token' => $token);
+        /*
+         * make touchRequest with the url of actionPre_image() and the array of saved token
+         * With this token the actionPre_image() again can get the link and id which are saved 
+         * in the token table
+         */
         ERunActions::touchUrlExt($url,$postData);
         
         
@@ -119,7 +136,7 @@
           {
             echo CJSON::encode(array(
               'status'=>'success', 
-              'div'=>'Your Bookmark is being generated'.$this->_link.$this->_bid,
+              'div'=>'Your Bookmark is being generated',
             ));
             
             exit;               
