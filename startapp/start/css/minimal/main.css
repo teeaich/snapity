@@ -1,8 +1,127 @@
+.afs-museo-sans { font-family: "Museo Sans", "Verdana", "Gill Sans", "Lucida Grande", "Arial", "Helvetica", sans-serif; ;}
+
+.afs-liberation-serif { font-family: "Liberation Serif", "Times New Roman", "Georgia", "Palatino", "Hoefler Text", "Baskerville", serif; font-size: 1.102em;}
+
+.afs-museo-slab { font-family: "Museo Slab", Rockwell, serif; font-size: 1.000em;}
+
+.afs-liberation-mono { font-family: "Liberation Mono", Menlo, Courier New, Courier, Mono, monospace; font-size: 0.958em;}
+
+
+@font-face {
+font-family: 'Museo Sans';
+src: url('/startapp/start/fonts/museosans_500-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/museosans_500-webfont.woff') format('woff'), url('/startapp/start/fonts/museosans_500-webfont.ttf') format('truetype'), url('/startapp/start/fonts/museosans_500-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Museo Sans';
+src: url('/startapp/start/fonts/MuseoSans_500_Italic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/MuseoSans_500_Italic-webfont.woff') format('woff'), url('/startapp/start/fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/MuseoSans_500_Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: 'Liberation Serif';
+src: url('/startapp/start/fonts/LiberationSerif-Bold-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationSerif-Bold-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationSerif-Bold-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationSerif-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Liberation Serif';
+src: url('/startapp/start/fonts/LiberationSerif-BoldItalic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationSerif-BoldItalic-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationSerif-BoldItalic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationSerif-BoldItalic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'Liberation Serif';
+src: url('/startapp/start/fonts/LiberationSerif-Italic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationSerif-Italic-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationSerif-Italic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationSerif-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'Liberation Serif';
+src: url('/startapp/start/fonts/LiberationSerif-Regular-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationSerif-Regular-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationSerif-Regular-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationSerif-Regular-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('/startapp/start/fonts/museo_slab_500-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/museo_slab_500-webfont.woff') format('woff'), url('/startapp/start/fonts/museo_slab_500-webfont.ttf') format('truetype'), url('/startapp/start/fonts/museo_slab_500-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Museo Slab';
+src: url('/startapp/start/fonts/museo_slab_500italic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/museo_slab_500italic-webfont.woff') format('woff'), url('/startapp/start/fonts/museo_slab_500italic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/museo_slab_500italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+
+@font-face {
+font-family: 'Liberation Mono';
+src: url('/startapp/start/fonts/LiberationMono-Bold-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationMono-Bold-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationMono-Bold-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationMono-Bold-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Liberation Mono';
+src: url('/startapp/start/fonts/LiberationMono-BoldItalic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationMono-BoldItalic-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationMono-BoldItalic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationMono-BoldItalic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 700;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'Liberation Mono';
+src: url('/startapp/start/fonts/LiberationMono-Italic-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationMono-Italic-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationMono-Italic-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationMono-Italic-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: italic;
+}
+
+
+@font-face {
+font-family: 'Liberation Mono';
+src: url('/startapp/start/fonts/LiberationMono-Regular-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/LiberationMono-Regular-webfont.woff') format('woff'), url('/startapp/start/fonts/LiberationMono-Regular-webfont.ttf') format('truetype'), url('/startapp/start/fonts/LiberationMono-Regular-webfont.svg#webfontX4pGz9fc') format('svg');
+font-weight: 400;
+font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
     color: #555;
-    font: normal 10pt Arial, Helvetica, sans-serif;
+    font: normal 10pt LiberationSerif,Arial, Helvetica, sans-serif;
     /*
       style=background-color: hsl(34, 53%, 82%);
       background-image: -webkit-repeating-linear-gradient(45deg, transparent 5px, 
@@ -39,7 +158,7 @@ body {
     }
 
 #page {
-   
+   margin-left: 0px;
     }
 
 #header {
@@ -50,8 +169,8 @@ body {
     }
 
 #content {
-    padding: 20px;
-    width: 500px;
+    /*padding: 20px;
+    /*width: 500px;*/
     }
 
 #sidebar {
@@ -73,7 +192,7 @@ body {
 
 #mainmenu {
     /*background:#C9E0ED;*/
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
     text-align: right;
     /*white url(bg.gif) repeat-x left top;*/
@@ -89,15 +208,19 @@ body {
     /*background: #dd9a94;*/
     }
 
-#mainmenu ul li a {
+#mainmenu a {
     color: #fff;
     background-color: transparent;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 14px;
+    /*font-weight: bold;*/
     text-decoration: none;
     /*padding: 5px 8px*/
     }
-
+#mainmenu span {
+    font-family: 'Museo Sans';
+    text-decoration: none; 
+    color: white;
+    }
 #mainmenu .login_button_bg {
     float: left;
     background: rgba(162, 79, 56, 0.6);    
@@ -120,8 +243,8 @@ body {
     border-radius: 60px;
     margin-top: 50px;
     margin-left: -110px;
-    -moz-box-shadow: inset 0px 1px 3px #2b262b;
-    box-shadow: inset 0px 1px 3px #2b262b;
+    /*-moz-box-shadow: inset 0px 1px 3px #2b262b;
+    box-shadow: inset 0px 1px 3px #2b262b;*/
 }
 
 #mainmenu .link_button {
@@ -135,8 +258,8 @@ body {
     width: 100px;
     -moz-border-radius: 60px;
     border-radius: 60px;
-    -moz-box-shadow: inset 0px 1px 3px #2b262b;
-    box-shadow: inset 0px 1px 3px #2b262b;
+    /*-moz-box-shadow: inset 0px 1px 3px #2b262b;
+    box-shadow: inset 0px 1px 3px #2b262b;*/
     margin-top: 50px;
     position: relative;
     left: -110px;    
@@ -148,8 +271,8 @@ body {
     width: 100px;
     -moz-border-radius: 60px;
     border-radius: 60px;
-    -moz-box-shadow: inset 0px 1px 3px #2b262b;
-    box-shadow: inset 0px 1px 3px #2b262b;
+    /*-moz-box-shadow: inset 0px 1px 3px #2b262b;
+    box-shadow: inset 0px 1px 3px #2b262b;*/
     margin-top: 50px;
     position: relative;
     left: -10px;    
@@ -213,7 +336,7 @@ div.form .rememberMe label {
 
 div.view {
     padding: 10px;
-    margin: 10px 0;
+    margin: 0px 0;
     /*border: 1px solid #C9E0ED;*/
     }
 

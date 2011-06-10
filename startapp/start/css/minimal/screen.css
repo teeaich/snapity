@@ -309,8 +309,8 @@ caption {
 
 /* grid.css */
 .container {
-    width: 1150px;
-    margin: 0 auto;
+    /*width: 1150px;*/
+    margin: 0 0 0 220px;
     -webkit-border-bottom-right-radius: 20px 20px;
     -moz-border-radius-bottomright: 20px 20px;
     border-bottom-right-radius: 20px 20px;
@@ -406,8 +406,8 @@ caption {
 
 .span-19 {
     /*width: 950px;*/
-    margin-left: 50px;
-    margin-top: 30px;
+    margin-left: 30px;
+    margin-top: 40px;
     float:left;
     }
 
