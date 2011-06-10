@@ -52,7 +52,7 @@ return array(
      'widgetFactory' => array(
             'widgets' => array(
                 'CListView'=>array(
-                  'cssFile' => dirname(Yii::app()->getBasePath()).'/start/css/minimal/listview/styles.css',
+                  'cssFile' => dirname(Yii::app()->getBasePath()).'/startapp/start/css/minimal/listview/styles.css',
                  ),
              ),
        
