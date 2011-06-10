@@ -154,7 +154,7 @@ body {
     /* first dotted designed stripe*/
     /*background-image: url(images/bg_dot_stripe.png);
     background-image: url(images/bg_stripes.png)*/
-    background-image: url(images/bg_easy.png);
+    background-image: url(images/black2.png);
     }
 
 #page {
@@ -230,8 +230,8 @@ body {
     border-radius: 60px;
     margin-top: 50px;
     text-align: center;
-    -moz-box-shadow: inset 0px 1px 3px #2b262b;
-    box-shadow: inset 0px 1px 3px #2b262b;
+    /*-moz-box-shadow: inset 0px 1px 3px #2b262b;
+    box-shadow: inset 0px 1px 3px #2b262b;*/
     
 }
 #mainmenu .logout_button_bg {
