@@ -295,17 +295,17 @@ body {
 }
 */
 .createButton {
-    border: 3px solid white;
-    float: left;
-    padding: 78px 32px;
-    margin: 4px;
-    font-family: 'Museo Sans';
-    text-decoration: none;
-    color: white;
-    font-size: 22px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+border: 2px dotted white;
+float: left;
+padding: 79px 33px;
+margin: 4px;
+font-family: 'Museo Sans';
+text-decoration: none;
+color: white;
+font-size: 22px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
 }
 
 .createButton:hover {
