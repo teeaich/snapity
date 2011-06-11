@@ -1,3 +1,4 @@
+<script type="text/javascript" src="/startapp/start/themes/minimal/js/corner.js"></script>
 <?php
   /*$this->breadcrumbs=array(
   'Bookmarks',
@@ -78,17 +79,4 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
  
 <?php $this->endWidget();?>
  
-<script type="text/javascript">
-  //alternative for dialog('open) and ('close')...which dont work:-(
-  function wasn() 
-  {
-    alert('nachricht');
-  }
-  
-  function dialogClose(id)
-  {
-    $('[id]').dialog('close');
 
-  }
-  
-</script>

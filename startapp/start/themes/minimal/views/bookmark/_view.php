@@ -13,7 +13,7 @@
       'target'=>'_blank',
                   ));
     echo CHtml::openTag('img',array(
-      'class'=>'imagelink',
+      'class'=>'corner iradius5',
       'src'=>$imageLink,
                   ));
     echo CHtml::closeTag('img');
