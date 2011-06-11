@@ -9,8 +9,8 @@
 
 @font-face {
 font-family: 'Museo Sans';
-src: url('/startapp/start/fonts/museosans_500-webfont.eot');
-src: local('☺'), url('/startapp/start/fonts/museosans_500-webfont.woff') format('woff'), url('/startapp/start/fonts/museosans_500-webfont.ttf') format('truetype'), url('/startapp/start/fonts/museosans_500-webfont.svg#webfontX4pGz9fc') format('svg');
+src: url('/startapp/start/fonts/MuseoSans_500-webfont.eot');
+src: local('☺'), url('/startapp/start/fonts/MuseoSans_500-webfont.woff') format('woff'), url('/startapp/start/fonts/MuseoSans_500-webfont.ttf') format('truetype'), url('/startapp/start/fonts/MuseoSans_500-webfont.svg#webfontX4pGz9fc') format('svg');
 font-weight: 400;
 font-style: normal;
 }
