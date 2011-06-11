@@ -4,8 +4,6 @@
     }
 
 div.view {
-    width: 250px;
-    height: 188px;
     /*background: white;*/
     padding: 4px;
     /*margin: 12px;
@@ -69,10 +67,6 @@ div.view:after {
     top: 38px
     }*/
 
-div.view .imagelink {
-    margin: auto;
-    display: block
-    }
 
 div.view:hover {
     /*border-bottom-style: solid;

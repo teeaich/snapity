@@ -279,12 +279,12 @@ body {
     }
 
 #mainmenu .main_buttons:hover {
-  background: white;
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  -ms-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+    background: white;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 /*#mainmenu ul li a:hover, #mainmenu ul li.active a
@@ -294,6 +294,24 @@ body {
   text-decoration:none;
 }
 */
+.createButton {
+    border: 3px solid white;
+    float: left;
+    padding: 78px 32px;
+    margin: 4px;
+    font-family: 'Museo Sans';
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.createButton:hover {
+    background: rgba(255, 239, 133, 0.6);
+    color: white;
+}
 div.flash-error, div.flash-notice, div.flash-success {
     padding: 0.8em;
     margin-bottom: 1em;
