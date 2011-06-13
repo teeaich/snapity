@@ -107,6 +107,7 @@
         $host = $request->getHostInfo();
         $url = $host.'/startapp/start/index.php?r=bookmark/getpre_image';
         $model->attributes=$_POST['Bookmark'];
+        $model->pre_image='loading.gif';
         $model->save();
         /*
          * prepare an array to save the link and id from saved model in token table

@@ -8,13 +8,13 @@
   <?php 
     $image_href = CHtml::encode($data->link);
     $imageLink = 'images/bk_preview/'.$data->pre_image;
-       
+    
     echo CHtml::openTag('a',array(
       'href'=>$image_href,
       'target'=>'_blank',
                   ));
     echo CHtml::openTag('img',array(
-      'class'=>'corner iradius5',
+      'class'=>$data->pre_image === 'loading.gif'? '':'corner iradius5',
       'src'=>$imageLink,
                   ));
     echo CHtml::closeTag('img');
