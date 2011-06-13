@@ -10,12 +10,6 @@ $this->menu=array(
 );
 ?>
 
-<!--<?php echo CHtml::link('Create Bookmark', "",  // the link for open the dialog
-    array(
-        'style'=>'cursor: pointer; text-decoration: underline;',
-        'onclick'=>"$('#dialogBookmark').dialog('open');addBookmark();"));?>
--->
-   
 <!--<h1>Bookmarks</h1>-->
 
 <?php $this->widget('zii.widgets.CListView', array(
@@ -62,10 +56,8 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
         'autoOpen'=>false,
         'modal'=>true,
         'width'=>550,
-        'height'=>470,
-        'close' => array('js:function(){$(this).dialog("destroy")}'),
-      'buttons' => array('js:function(){$(this).dialog("close")}'),
-
+        'height'=>300,
+        
     ),
 ));?>
 <div id="divForForm"></div>
