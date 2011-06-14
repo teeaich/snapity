@@ -36,7 +36,8 @@
               'users'=>array('*'),
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
-              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view','getBookmarkTitle'),
+              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view',
+                  'getBookmarkTitle','getBookmarkOptions'),
               'users'=>array('@'),
               
              ),
@@ -178,6 +179,13 @@
       $model=Bookmark::model()->findByPk((int)$_POST['id']);
       echo CHtml::encode($model->title);
       
+    }
+    
+    public function actiongetBookmarkOptions() {
+      $model=new Bookmark;
+      
+      $model=Bookmark::model()->findByPk((int)$_POST['id']);
+      $this->renderPartial('_options', array('model'=>$model));
     }
     
     /**

@@ -73,7 +73,7 @@ var animateIn = function animateIn() {
     
 }
 var animateOut = function animateOut() {
-    var ajax_load = "<img src='img/load.gif' alt='loading...' />";  
+    var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />";  
     var loadUrl = "index.php?r=bookmark/getBookmarkTitle"; 
     $('#'+gotID+'').children().html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
         if (status == "error") {
@@ -85,6 +85,14 @@ var animateOut = function animateOut() {
     
 }
 var cursorOut = function cursorOut() {
+    var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />";  
+    var loadUrl = "index.php?r=bookmark/getBookmarkOptions"; 
+    $('#'+gotID+'').children().html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
+        if (status == "error") {
+            var msg = "error loading Bookmark: ";
+            $(this).html(msg + xhr.status + " ");
+        }
+  });
     $(this).mouseleave(animateOut);
     
 }
