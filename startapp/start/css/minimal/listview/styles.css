@@ -85,7 +85,7 @@ div.view:after {
     
 }
 /* div in div to achieve padding within the box*/
-div #tooltip {
+.tooltipInner {
     padding-top:7px;
 }
 
