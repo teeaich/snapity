@@ -36,7 +36,7 @@
               'users'=>array('*'),
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
-              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view','go','test'),
+              'actions'=>array('create','update','admin','delete','ajaxcreate','index','view','getBookmarkTitle'),
               'users'=>array('@'),
               
              ),
@@ -172,6 +172,13 @@
       
       
     }
+    public function actiongetBookmarkTitle(){
+      $model=new Bookmark;
+      
+      $model=Bookmark::model()->findByPk((int)$_POST['id']);
+      echo CHtml::encode($model->title);
+      
+    }
     
     /**
     * Creates a new model.
@@ -213,9 +220,11 @@
     
     
     /**
+     * OLD FUNCTION, DEACTIVATED SINCE WEBTHUMB WAS IMPLEMENTED
     * Processing to replace the link from the model with the image_provider_link provided by the Config database
     * saves the image from webservice into database with an unique filename
     **/
+    /*
     private function saveFileBatch($link)
     {
       $imageProviderLink = Config::getConfigValue('image_provider_link');
@@ -230,7 +239,7 @@
         
         return $unique;
     }
-    
+    */
     /**
     * Updates a particular model.
     * If update is successful, the browser will be redirected to the 'view' page.
