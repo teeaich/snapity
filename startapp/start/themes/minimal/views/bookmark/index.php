@@ -1,4 +1,5 @@
 <script type="text/javascript" src="/startapp/start/themes/minimal/js/corner.js"></script>
+<script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"></script>
 <?php
   /*$this->breadcrumbs=array(
   'Bookmarks',
@@ -63,5 +64,64 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
 <div id="divForForm"></div>
  
 <?php $this->endWidget();?>
- 
+
+<script type="text/javascript">
+var animateIn = function animateIn() {
+    gotID = $(this).attr('id');
+    
+    $('#'+gotID+'').animate({"height" : "188px"},300,cursorOut);   
+    
+}
+var animateOut = function animateOut() {
+    var ajax_load = "<img src='img/load.gif' alt='loading...' />";  
+    var loadUrl = "index.php?r=bookmark/getBookmarkTitle"; 
+    $('#'+gotID+'').children().html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
+        if (status == "error") {
+            var msg = "error loading title: ";
+            $(this).html(msg + xhr.status + " ");
+        }
+  });
+    $(this).animate({"height":"40px"}, 100);
+    
+}
+var cursorOut = function cursorOut() {
+    $(this).mouseleave(animateOut);
+    
+}
+
+$(document).ready(function(){
+// create custom animation algorithm for jQuery called "bouncy"
+    $.easing.bouncy = function (x, t, b, c, d) {
+        var s = 1.70158;
+        if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+        return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+    }
+
+    // create custom tooltip effect for jQuery Tooltip
+    $.tools.tooltip.addEffect("bouncy",
+
+	// opening animation
+	function(done) {
+		this.getTip().animate({opacity: 0.7, top: '+=20'}, 300, 'bouncy', done).show();
+	},
+
+	// closing animation
+	function(done) {
+		this.getTip().animate({opacity: 0,top: '-=20'}, 200, 'bouncy', function()  {
+			$(this).hide();
+			done.call();
+		});
+	}
+    );
+    // the simple tooltip effect with an offset which let it appears in front of 
+    // the imagebox. 
+    
+    $("div.view").tooltip({ offset: [-16, -250], opacity: 0.7,effect: 'bouncy'});
+    $.ajaxSetup ({  
+        cache: false  
+    });  
+    // when click event is captured animateIn callback is starting look above
+    $(".tooltip").click(animateIn);
+});
+</script>
 
