@@ -120,8 +120,8 @@ font-style: normal;
 body {
     margin: 0;
     padding: 0;
-    color: #555;
-    font: normal 10pt LiberationSerif,Arial, Helvetica, sans-serif;
+    color: white;
+    font: normal 10pt 'Liberation Mono',Arial, Helvetica, sans-serif;
     /*
       style=background-color: hsl(34, 53%, 82%);
       background-image: -webkit-repeating-linear-gradient(45deg, transparent 5px, 
@@ -432,3 +432,4 @@ div.search-form {
 .operations li a:hover {
     background: #80CFFF
     }
+​
