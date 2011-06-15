@@ -1,4 +1,3 @@
-<?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 <div class="view">
 
   
@@ -32,7 +31,3 @@
        <!-- <div class="button">x</div>-->
     </div>
 </div>
-<script type="text/javascript">
-$(document).ready(function(){
-});
-</script>

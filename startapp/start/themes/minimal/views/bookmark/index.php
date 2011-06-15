@@ -1,5 +1,6 @@
+<?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 <script type="text/javascript" src="/startapp/start/themes/minimal/js/corner.js"></script>
-<script src="http://cdn.jquerytools.org/1.2.5/all/jquery.tools.min.js"></script>
+<script src="/startapp/start/themes/minimal/js/jquery.tools.min.js"></script>
 <?php
   /*$this->breadcrumbs=array(
   'Bookmarks',

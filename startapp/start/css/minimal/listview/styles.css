@@ -74,7 +74,7 @@ div.view:after {
     width:250px;
     font-size:20px;
     color:#fff;
-    background: black;
+    background: rgba(30, 30, 30, 0.8);
     text-align: center;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -88,24 +88,40 @@ div.view:after {
 .tooltipInner {
     padding-top:7px;
 }
+.optionsDelete {
+    /*background: rgba(30, 30, 30, 0.8);*/
+    padding: 20px;
+    background: red;
+    float: left;
+}
+
+.optionsEditImage {
+    float: left;
+    margin-left: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: blue;
+}
 
 .button {
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding-top: 2px;
-  padding-right: 8px;
-  padding-bottom: 2px;
-  padding-left: 8px;
-  text-decoration: none;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  border: solid #f2edef 2px;
-  background: -webkit-gradient(linear, 0 0, 0 100%, from(#0f0f0f), to(#333132));
-  background: -moz-linear-gradient(top, #0f0f0f, #333132);
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    text-decoration: none;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border: solid #f2edef 2px;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#0f0f0f), to(#333132));
+    background: -moz-linear-gradient(top, #0f0f0f, #333132);
 }
 .button:hover {
-  background: #828081;
+    background: #828081;
 }
 .list-view {
   /*  float:left;    */
