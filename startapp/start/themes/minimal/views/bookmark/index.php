@@ -109,18 +109,18 @@ $(document).ready(function(){
     // create custom tooltip effect for jQuery Tooltip
     $.tools.tooltip.addEffect("bouncy",
 
-	// opening animation
-	function(done) {
-		this.getTip().animate({opacity: 0.7, top: '+=20'}, 300, 'bouncy', done).show();
-	},
+  // opening animation
+  function(done) {
+    this.getTip().animate({opacity: 0.7, top: '+=20'}, 300, 'bouncy', done).show();
+  },
 
-	// closing animation
-	function(done) {
-		this.getTip().animate({opacity: 0,top: '-=20'}, 200, 'bouncy', function()  {
-			$(this).hide();
-			done.call();
-		});
-	}
+  // closing animation
+  function(done) {
+    this.getTip().animate({opacity: 0,top: '-=20'}, 200, 'bouncy', function()  {
+      $(this).hide();
+      done.call();
+    });
+  }
     );
     // the simple tooltip effect with an offset which let it appears in front of 
     // the imagebox. 
@@ -134,3 +134,4 @@ $(document).ready(function(){
 });
 </script>
 
+​

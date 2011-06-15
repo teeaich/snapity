@@ -3,7 +3,8 @@
 class SiteController extends Controller
 {
   public $_wert =0;
-  
+  public $layout='//layouts/base';
+
   /**
    * Declares class-based actions.
    */
@@ -205,4 +206,4 @@ class SiteController extends Controller
       Yii::app()->end();
     }
   } 
-}
+}​
