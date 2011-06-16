@@ -51,12 +51,10 @@
                                if (data.status == 'failure') 
                                    {
                                       $('#dialogBookmark').html(data.div);
-                                      alert ('mein Titel','status failure');
                                    }
                                if (data.status == 'success')
                                    {
                                       $('#dialogBookmark').html(data.div);                                                 
-                                      alert ('Titel','else');
                                       $('#dialogBookmark').fadeOut(900);
                                       $('#dialogBookmark').dialog('close');                                                            
                                                                                                   
