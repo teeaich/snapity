@@ -101,6 +101,8 @@ class UserIdentityOID extends CUserIdentity
             $loid->identity = "https://www.google.com/accounts/o8/id"; //Setting identifier
             $loid->required = array('namePerson/first','namePerson/last',
                                     'contact/country/home','contact/email'); //Try to get info from openid provider
+            $loid->optional = array('openid.ns.ui'=> 'http://specs.openid.net/extensions/pape/1.0',
+                'openid.ui.mode'=>'popup');
             $loid->realm     = (!empty($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
            
             $loid->returnUrl = $loid->realm . $_SERVER['REQUEST_URI']; //getting return URL

@@ -37,6 +37,14 @@
     <?php echo $form->error($model,'rememberMe'); ?>
   </div>
   <?php echo CHtml::Link('Login with Google',CHtml::normalizeUrl(array('site/OpenId')));?>
+  <?php echo CHtml::ajaxLink('Login with Google',CHtml::normalizeUrl(array('site/OpenId')),array(
+                             'dataType'=>'json',
+                             'success'=>"js:function(data) {
+                                 if (data.status == 'success') {
+                                    $('#dialogLogin').html(data.div);
+                                 }
+                              }"
+                            ),array('id'=>'send-link-'.uniqid()));?>
   <div class="row buttons">
     <?php echo CHtml::ajaxSubmitButton('Login',CHtml::normalizeUrl(array('site/ajaxLogin')),array(
                              'type'=>'post',
