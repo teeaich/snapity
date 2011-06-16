@@ -7,4 +7,4 @@
   </div>
  
 </div>
-<?php $this->endContent(); ?>​
+<?php $this->endContent(); ?>
