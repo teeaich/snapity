@@ -23,23 +23,24 @@
 
   <div id="mainmenu">
     
-    <?php echo CHtml::ajaxLink('<span class="link_button">Login</span>',CHtml::normalizeUrl(array('site/ajaxLogin')),array('type'=>'post',
+    <?php echo CHtml::ajaxLink('<span class="mainButtonText">Login</span>',CHtml::normalizeUrl(array('site/ajaxLogin')),array('type'=>'post',
             'dataType'=>'json',
             'update' => '#dialogLogin'),array('id'=>'send-link-'.uniqid(),
                                        'onclick'=>"$('#dialogLogin').dialog('open');",
-                                       'class'=>'login_button_bg',
+                                       'class'=>'mainLoginButton_bg',
                                        'style'=>!Yii::app()->user->isGuest?'visibility:hidden':''
                                        
                                              ));?>
     
    
-    <?php echo CHtml::Link('<span style=margin-right:30px; class="link_button">Logout</span>',CHtml::normalizeUrl(array('site/logout')),array('class'=>'link_button',
+    <?php echo CHtml::Link('<span style=margin-right:25px; class="mainButtonText">Logout</span>',CHtml::normalizeUrl(array('site/logout')),array('class'=>'link_button',
                                        'style'=>Yii::app()->user->isGuest?
                                        'visibility:hidden;':'margin-left:-100px;',
-                                       'class'=>Yii::app()->user->isGuest?'login_button_bg':'logout_button_bg'))?>
+                                       'class'=>Yii::app()->user->isGuest?'mainLoginButton_bg':'mainLogoutButton_bg'))?>
     
-    <?php echo CHtml::Link('<span style=margin-right:6px; class="link_button">MyBookmarks</span>',CHtml::normalizeUrl(array('/bookmark')),array(
-                                       'class'=>!Yii::app()->user->isGuest?'main_buttons_logged':'main_buttons'
+    <?php echo CHtml::Link('<span style=margin-right:6px; class="mainButtonText">MyBookmarks</span>',CHtml::normalizeUrl(array('/bookmark')),array(
+                                       'class'=>!Yii::app()->user->isGuest?'mainButtonLogged'
+                                      :'mainButton'
                                              ));?>
     
     
