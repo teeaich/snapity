@@ -44,7 +44,7 @@
   </div>
 -->
   <div class="row buttons">
-    <?php echo CHtml::ajaxSubmitButton('Create Job',CHtml::normalizeUrl(array('bookmark/ajaxcreate')),array('type'=>'post',
+    <?php echo CHtml::ajaxSubmitButton('Create Bookmark',CHtml::normalizeUrl(array('bookmark/ajaxcreate')),array('type'=>'post',
             'dataType'=>'json',
             'success'=>"js:function(data) 
                              {
