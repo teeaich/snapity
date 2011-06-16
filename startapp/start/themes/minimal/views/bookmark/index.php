@@ -44,7 +44,7 @@ $this->menu=array(
                                                                                              
                                
                              }"),array('id'=>'send-link-'.uniqid(),
-                                       'class'=>'createButton',
+                                       'class'=>'createBookmarkButton',
                                        'onclick'=>"$('#dialogBookmark').dialog('open');"))
                                                                                                   
                               ?>
@@ -134,4 +134,3 @@ $(document).ready(function(){
 });
 </script>
 
-​
