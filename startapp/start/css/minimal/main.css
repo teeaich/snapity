@@ -153,7 +153,7 @@ body {
     margin: 10px 20px;
     font-size: 0.8em;
     text-align: center;
-    /*border-top: 1px solid #C9E0ED;*/
+    clear:both;
     }
 
 #logo {
@@ -186,7 +186,7 @@ body {
     /*padding: 5px 8px*/
     }
 
-#mainmenu .login_button_bg {
+#mainmenu .mainLoginButton_bg {
     float: left;
     background: rgba(162, 79, 56, 0.6);    
     height: 100px;
@@ -200,7 +200,7 @@ body {
     box-shadow: inset 0px 1px 3px #2b262b;*/
     
 }
-#mainmenu .logout_button_bg {
+#mainmenu .mainLogoutButton_bg {
     float: left;
     background: rgba(138, 197, 212, 0.6);    
     height: 100px;
@@ -215,7 +215,7 @@ body {
 }
 
 
-#mainmenu .main_buttons {
+#mainmenu .mainButton {
   
     float: left;
     background: rgba(255, 239, 133, 0.6);    height: 100px;
@@ -230,7 +230,7 @@ body {
     left: -110px;    
     }
 
-#mainmenu .main_buttons_logged {
+#mainmenu .mainButtonLogged {
     float: left;
     background: rgba(255, 239, 133, 0.6);    height: 100px;
     width: 100px;
@@ -244,7 +244,7 @@ body {
     left: -10px;    
     }
 
-#mainmenu .main_buttons:hover {
+#mainmenu .mainButton:hover {
     background: white;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -253,8 +253,17 @@ body {
     transition: all 1s ease-in-out;
 }
 
-
-.baseLoginButton_bg {
+#mainmenu span.mainButtonText{
+    font-family: 'SixCapsRegular';
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    padding-left: 8px;
+    color: white;
+    padding-top: 30px;
+    display:block;
+    }
+#baseLoginButton_bg {
+    cursor:pointer;
     background: rgba(162, 79, 56, 0.6);    
     height: 200px;
     width: 200px;
@@ -262,21 +271,38 @@ body {
     -webkit-border-radius: 100px;
     border-radius: 100px;
     margin-top: 100px;
-    margin-left:auto;
+    margin-left:42%;
     margin-right:auto;
     text-align: center;
     text-decoration:none;
     display:block;
+    position:relative;
+    float:left;
+    
+    
 }
-span.link_button{
+
+span.baseLoginButtonText {
     font-family: 'SixCapsRegular';
     font-size: 100px;
     letter-spacing: 0.1em;
     padding-left: 10px;
     color: white;
     padding-top: 30px;
-    display:block;
-    }
+    display:block;    
+}
+
+#withText {
+    float:left;
+}
+
+#divForAjaxLoginForm {
+    float: left;
+    border-left: #ddd 2px solid;
+    width: 300px;
+    height: 300px;
+}
+
 .createBookmarkButton {
     border: 2px dotted white;
     float: left;
