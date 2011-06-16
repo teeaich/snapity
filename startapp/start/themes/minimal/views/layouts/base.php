@@ -21,6 +21,7 @@
 
 <div class="container" id="page">
 
+
   <div id="mainmenu"></div>
  
   <!-- dialog coding for login begins here-->
@@ -45,20 +46,21 @@
   <?php echo $content; ?>
   
   <!-- ajaxlink to start the dialog widget with callback function-->
-  <div class="baseLogin">
-     <?php echo CHtml::ajaxLink('<span class="link_button">Login</span>',
+  <!--<div class="baseLogin">
+    <?php echo CHtml::ajaxLink('<span class="link_button">Login</span>',
                      CHtml::normalizeUrl(array('site/ajaxLogin')),array(
                        'type'=>'post',
                        'dataType'=>'json',
                        'update' => '#dialogLogin'),array(
                            'id'=>'send-link-'.uniqid(),
-                           'onclick'=>"$('#dialogLogin').dialog('open');",
+                         //'onclick'=>"$('#dialogLogin').dialog('open');",
                            'class'=>'baseLoginButton_bg',        
                            ));
-     ?>
+     ?>-->
     
-  </div><!-- end of ajaxlink to start dialog-->
+  <!--</div><!-- end of ajaxlink to start dialog-->
   
+  <!--<div id="divForLoginContent"></div>-->
   <!-- begin of footer-->
   <div id="footer">
     Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
@@ -67,6 +69,7 @@
   </div><!-- end of footer -->
 
 </div><!-- end of class=container and id=page -->
+         
 
 </body>
 </html>
