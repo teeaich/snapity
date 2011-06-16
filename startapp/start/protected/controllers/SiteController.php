@@ -77,14 +77,14 @@ class SiteController extends Controller
     $result = $model->loginOpenID();
     if ($result == false)
     {
-        if(Yii::app()->request->isAjaxRequest) {
+        /*if(Yii::app()->request->isAjaxRequest) {
             echo JSON::encode (array (
                 'status'=>'success',
                 'div'=>'Login successfull',
             ));
             exit;
-        }
-        //$this->redirect('index.php?r=bookmark');
+        }*/
+        $this->redirect('index.php?r=bookmark');
     }
     
     else $this->redirect($result);
@@ -132,7 +132,7 @@ class SiteController extends Controller
         {
 
             echo CJSON::encode(
-              $this->renderPartial('login', array('model'=>$model),true, true));
+              $this->renderPartial('login', array('model'=>$model),false,true));
 
             exit;               
         }
