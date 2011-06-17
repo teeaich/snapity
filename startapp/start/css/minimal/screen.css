@@ -16,6 +16,18 @@
 .afs-museo-slab { font-family: "Museo Slab", Rockwell, serif; font-size: 1.000em;}
 
 @font-face {
+    font-family: 'DISCORegular';
+    src: url('/startapp/start/fonts/DISCO___-webfont.eot');
+    src: url('/startapp/start/fonts/DISCO___-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/startapp/start/fonts/DISCO___-webfont.woff') format('woff'),
+         url('/startapp/start/fonts/DISCO___-webfont.ttf') format('truetype'),
+         url('/startapp/start/fonts/DISCO___-webfont.svg#DISCORegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
     font-family: 'ColaborateThinRegular';
     src: url('/startapp/start/fonts/ColabThi-webfont.eot');
     src: url('/startapp/start/fonts/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
@@ -168,14 +180,15 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
-    font-family: 'ColaborateLightRegular', Arial, Helvetica, sans-serif;
+    font-family: 'DISCORegular', Arial, Helvetica, sans-serif;
     color: white;
     }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     line-height: 1;
-    margin-bottom: 0.5em
+    margin-bottom: 0.5em;
+    letter-spacing: -0.2em;
     }
 
 h2 {
