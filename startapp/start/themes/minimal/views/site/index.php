@@ -36,7 +36,7 @@
     },
     function(){
         $("#baseLoginButton_bg").animate({
-            marginLeft: '+38%'
+            marginLeft: '+=38%'
         },500,'swing');
         $("#divForAjaxLoginForm").empty();
     });
