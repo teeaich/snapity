@@ -298,7 +298,7 @@ span.baseLoginButtonText {
 
 #divForAjaxLoginForm {
     float: left;
-    border-left: #ddd 2px solid;
+    /*border-left: #ddd 2px solid;*/
     width: 300px;
     height: 300px;
 }
