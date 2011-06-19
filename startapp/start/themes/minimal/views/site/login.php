@@ -1,9 +1,6 @@
 <?php Yii::app()->clientscript->scriptMap['jquery.js'] = false;?>
-<h1>Login</h1>
 
-<div class="openIdProvider">
-    <?php echo CHtml::Link('Login with Google',CHtml::normalizeUrl(array('site/OpenId')));?>
-</div>
+
 <div id="dialogLoginView" class="form">
 <?php $form=$this->beginWidget('CActiveForm', array(
   'id'=>'login-form',
@@ -14,7 +11,7 @@
   
 ))); ?>
 
-  <p class="note">Fields with <span class="required">*</span> are required.</p>
+  <!--<p class="note">Fields with <span class="required">*</span> are required.</p>-->
 
   <div class="row">
     <?php echo $form->labelEx($model,'username'); ?>
@@ -39,7 +36,10 @@
                              'type'=>'post',
                              'dataType'=>'json',
                              'update'=>'#dialogLogin'),array('id'=>'send-link-'.uniqid())); ?>
-</div>
+  </div>
+  <div class="openIdProvider">
+    <?php echo CHtml::Link('Login with Google',CHtml::normalizeUrl(array('site/OpenId')));?>
+  </div>
 
 <?php $this->endWidget(); ?>
 </div><!-- form -->
