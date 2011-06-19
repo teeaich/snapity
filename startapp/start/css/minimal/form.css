@@ -67,7 +67,7 @@ div.form .note {
     }
 
 div.form span.required {
-    color: red
+    color: #0F1114
     }
 
 div.form div.error label, div.form label.error, div.form span.error {
