@@ -125,7 +125,7 @@ $(document).ready(function(){
     // the simple tooltip effect with an offset which let it appears in front of 
     // the imagebox. 
     
-    $("div.view").tooltip({ offset: [-16, -250], opacity: 0.7,effect: 'bouncy'});
+    $("div.view").tooltip({ offset: [-19, -250], opacity: 0.7,effect: 'bouncy'});
     $.ajaxSetup ({  
         cache: false  
     });  
