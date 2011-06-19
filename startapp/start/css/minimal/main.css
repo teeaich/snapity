@@ -232,7 +232,8 @@ body {
 
 #mainmenu .mainButtonLogged {
     float: left;
-    background: rgba(255, 239, 133, 0.6);    height: 100px;
+    background: rgba(43, 137, 154, 0.6);
+    height: 100px;
     width: 100px;
     -moz-border-radius: 60px;
     -webkit-border-radius:60px;
@@ -264,13 +265,16 @@ body {
     }
 #baseLoginButton_bg {
     cursor:pointer;
-    background: rgba(162, 79, 56, 0.6);    
+    /*background: rgba(162, 79, 56, 0.6);*/
+    background-image: url(images/logo2.png);
+    background-attachment: fixed;
+    background-position: -4px 0;
     height: 200px;
     width: 200px;
     -moz-border-radius: 100px;
     -webkit-border-radius: 100px;
     border-radius: 100px;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-left:42%;
     margin-right:auto;
     text-align: center;
@@ -278,37 +282,49 @@ body {
     display:block;
     position:relative;
     float:left;
+    z-index: 3;
     
     
 }
 
 span.baseLoginButtonText {
-    font-family: 'SixCapsRegular';
-    font-size: 100px;
-    letter-spacing: 0.1em;
     padding-left: 10px;
     color: white;
-    padding-top: 30px;
+    padding-top: 60px;
     display:block;    
 }
 
 #withText {
     float:left;
+    font-family: 'SixCapsRegular';
+    font-size: 200px;
+    position: relative;
+    letter-spacing: 0.1em;
+    z-index:3;
+    opacity: 0.6;
+    left: -30px;
+    bottom: -60px;
+    margin-right: -50px;
+    display:none;
 }
 
 #divForAjaxLoginForm {
     float: left;
-    /*border-left: #ddd 2px solid;*/
     width: 300px;
-    height: 300px;
+    height: 200px;
+    padding-left:10px;
+    position:relative;
+    z-index:2;
+    margin-top:81px;
 }
 
 .createBookmarkButton {
     border: 2px dotted white;
     float: left;
-    padding: 79px 33px;
-    margin: 4px;
-    font-family: 'Museo Sans';
+    padding: 81px 33px;
+    margin: 1px;
+    font-family: 'DISCORegular';
+    letter-spacing: -0.15em;
     text-decoration: none;
     color: white;
     font-size: 22px;
