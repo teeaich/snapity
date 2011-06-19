@@ -38,10 +38,6 @@
                                        'visibility:hidden;':'margin-left:-100px;',
                                        'class'=>Yii::app()->user->isGuest?'mainLoginButton_bg':'mainLogoutButton_bg'))?>
     
-    <?php echo CHtml::Link('<span style=margin-right:6px; class="mainButtonText">MyBookmarks</span>',CHtml::normalizeUrl(array('/bookmark')),array(
-                                       'class'=>!Yii::app()->user->isGuest?'mainButtonLogged'
-                                      :'mainButton'
-                                             ));?>
     
     
   </div>  
