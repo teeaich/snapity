@@ -71,18 +71,3 @@
 
 </div><!-- form -->
 
-<!--
-                                {
-                                    alert( 'mein Titel', 'meine Nachricht' ); 
-                                                                                                                                                         $('#dialogBookmark').dialog('close');
-                                    $('#dialogAjax div.form').html(data.div);
-                                    // Here is the trick: on submit-> once again this function!
-                                                   //$('#dialogBookmark div.divForForm form').submit(add                                                                  
-                                }
-                                else
-                                    {
-                                        $('#dialogBookmark div.form').html(data.div);
-                                        setTimeout(\"$('#dialogBookmark').dialog('close') \",3000);
-                                    }
-                                    }"));
-                           -->
