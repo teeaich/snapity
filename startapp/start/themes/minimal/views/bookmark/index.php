@@ -65,8 +65,28 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
 <div id="divForForm"></div>
  
 <?php $this->endWidget();?>
+<?php
+$this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
+    'id'=>'dialogEditImage',
+    'options'=>array(
+        'title'=>'Crop the Image',
+        'autoOpen'=>false,
+        'modal'=>true,
+        'width'=>1200,
+        'height'=>850,
+        
+    ),
+));?>
+<div id="divForEditImage"></div>
+ 
+<?php $this->endWidget();?>
+
 
 <script type="text/javascript">
+    
+// global var js
+var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />"; 
+    
 var animateIn = function animateIn() {
     gotID = $(this).attr('id');
     
@@ -74,7 +94,6 @@ var animateIn = function animateIn() {
     
 }
 var animateOut = function animateOut() {
-    var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />";  
     var loadUrl = "index.php?r=bookmark/getBookmarkTitle"; 
     $('#'+gotID+'').children().html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
         if (status == "error") {
@@ -86,7 +105,6 @@ var animateOut = function animateOut() {
     
 }
 var cursorOut = function cursorOut() {
-    var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />";  
     var loadUrl = "index.php?r=bookmark/getBookmarkOptions"; 
     $('#'+gotID+'').children().html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
         if (status == "error") {

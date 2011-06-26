@@ -51,8 +51,6 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
         'modal'=>true,
         'width'=>550,
         'height'=>470,
-      //'close' => array('js:function(){$(this).dialog("destroy")}'),
-      //'buttons' => array('hallo','js:function(){$(this).dialog("close")}'),
     ),
 ));?>
 <div id="divForLoginForm"></div>
