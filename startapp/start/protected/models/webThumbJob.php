@@ -2,7 +2,7 @@
   class webThumbJob {
     
     private $_link;
-    public $pre_image;
+    public $snapshot;
     
     public function __construct($link) {
       $this->_link = $link;
