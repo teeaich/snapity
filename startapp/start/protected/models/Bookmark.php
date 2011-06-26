@@ -7,7 +7,8 @@
  * @property integer $id
  * @property string $title
  * @property string $link
- * @property string $pre_image
+ * @property string $snaphot
+ * @property string $webthumbID
  * @property integer $create_time
  * @property integer $user_bk_id
  *
@@ -46,10 +47,10 @@ class Bookmark extends CActiveRecord
       array('title, link', 'required'),
       //array('create_time, user_bk_id', 'numerical', 'integerOnly'=>true),
       array('title, link,','length', 'max'=>128),
-      //array('pre_image', 'file', 'types'=>'jpg, gif, png'),
+      //array('snapshot', 'file', 'types'=>'jpg, gif, png'),
       // The following rule is used by search().
       // Please remove those attributes that should not be searched.
-      array('id, title, link, pre_image, create_time, user_bk_id', 'safe', 'on'=>'search'),
+      array('id, title, link, snapshot, webthumbID, create_time, user_bk_id', 'safe', 'on'=>'search'),
     );
   }
   // the abiltity just to show the bookmarks which belongs to a user specified by the user_bk_id.
@@ -97,7 +98,7 @@ class Bookmark extends CActiveRecord
       'id' => 'ID',
       'title' => 'Title',
       'link' => 'Link',
-      'pre_image' => 'Pre Image',
+      'snapshot' => 'Snapshot',
       'create_time' => 'Create Time',
       'user_bk_id' => 'User Bk',
     );
@@ -133,8 +134,8 @@ class Bookmark extends CActiveRecord
     $criteria->compare('id',$this->id);
     $criteria->compare('title',$this->title,true);
     $criteria->compare('link',$this->link,true);
-    $criteria->compare('pre_image',$this->pre_image,true);
-    $criteria->compare('image',$this->pre_image,true);
+    $criteria->compare('snapshot',$this->snapshot,true);
+    $criteria->compare('webthumbID',$this->webthumbID,true);
     $criteria->compare('create_time',$this->create_time);
     $criteria->compare('user_bk_id',$this->user_bk_id);
 
