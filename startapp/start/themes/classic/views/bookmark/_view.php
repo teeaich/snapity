@@ -7,7 +7,7 @@
     -->
   <?php 
     $image_href = CHtml::encode($data->link);
-    $imageLink = 'images/bk_preview/'.$data->pre_image;
+    $imageLink = 'images/bk_preview/'.$data->snapshot;
     echo CHtml::openTag('a',array(
       'href'=>$image_href,
       'target'=>'_blank',
