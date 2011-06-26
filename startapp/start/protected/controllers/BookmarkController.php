@@ -32,7 +32,7 @@
       return array(
         array('allow',  // allow all users to perform 'index' and 'view' actions
               // no action allowed at the moment for any non authenticated user
-              'actions'=>array('getPre_image'),
+              'actions'=>array('getWebthumbID'),
               'users'=>array('*'),
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -72,8 +72,8 @@
       //for debugging
       //$model=Bookmark::model()->findByPk((int)'87');   
 
-      $model->snapshot = snapshot;
-      $model->webthumbID = snapshot;
+      $model->snapshot = $snapshot.'.jpg';
+      $model->webthumbID = $snapshot;
       $model->save();
       
     }
