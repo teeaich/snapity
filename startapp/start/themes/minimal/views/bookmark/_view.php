@@ -12,7 +12,7 @@
       'target'=>'_blank',
                   ));
     echo CHtml::openTag('img',array(
-      'class'=>$data->pre_image === 'loading.gif'? '':'corner iradius5',
+      'class'=>$data->pre_image === 'loading.gif'? '':'placeholder',
       'src'=>$imageLink,
                   ));
     echo CHtml::closeTag('img');
