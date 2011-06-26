@@ -21,7 +21,7 @@ $this->menu=array(
     'id',
     'title',
     'link',
-    'pre_image',
+    'snapshot',
     'create_time',
     'user_bk_id',
   ),
