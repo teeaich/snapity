@@ -58,7 +58,7 @@
       ));
     }
     
-    public function actionGetPre_image()
+    public function actionGetWebthumbID()
     {
       // First of all get the data (link and id) with the token bundled in the post request
       $data = Yii::app()->token->validate('generate', $_POST['token']);
@@ -67,14 +67,21 @@
       //$job = new webThumbJob('http://www.google.de');
 
       
-      $pre_image = $job->perform();
+      $snapshot = $job->perform();
       $model=Bookmark::model()->findByPk((int)$data['id']); 
       //for debugging
       //$model=Bookmark::model()->findByPk((int)'87');   
 
-      $model->pre_image = $pre_image;
+      $model->snapshot = snapshot;
       $model->save();
       
+    }
+    
+    public function actionGetBigImage()
+    {
+        $model = new Bookmark;
+        $model = Bookmark::model()->findByPk((int)$_POST['id']);
+        
     }
     
     public function actionRunWorker()
@@ -106,9 +113,9 @@
         $request = Yii::app()->request;
         
         $host = $request->getHostInfo();
-        $url = $host.'/startapp/start/index.php?r=bookmark/getpre_image';
+        $url = $host.'/startapp/start/index.php?r=bookmark/getWebthumbID';
         $model->attributes=$_POST['Bookmark'];
-        $model->pre_image='loading.gif';
+        $model->snapshot='loading.gif';
         $model->save();
         /*
          * prepare an array to save the link and id from saved model in token table
@@ -123,8 +130,8 @@
          */
         $postData = array ( 'token' => $token);
         /*
-         * make touchRequest with the url of actionPre_image() and the array of saved token
-         * With this token the actionPre_image() again can get the link and id which are saved 
+         * make touchRequest with the url of actiongetWebthumbID() and the array of saved token
+         * With this token the actiongetWebthumbID() again can get the link and id which are saved 
          * in the token table
          */
         ERunActions::touchUrlExt($url,$postData);
@@ -206,7 +213,7 @@
         
         
         
-        $model->setAttribute('pre_image',$unique.'.jpg');
+        $model->setAttribute('snapshot',$unique.'.jpg');
         $model->setAttribute('user_bk_id',Yii::app()->user->id);
         if(!$model->save());
         echo 'jo';
