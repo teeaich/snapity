@@ -22,27 +22,7 @@
     <?php echo $form->textField($model,'link',array('size'=>60,'maxlength'=>128)); ?>
     <?php echo $form->error($model,'link'); ?>
   </div>
-  <!--
-  <div class="row">
-    <?php echo $form->labelEx($model,'pre_image'); ?>
-    <?php echo $form->textField($model,'pre_image',array('size'=>60,'maxlength'=>128)); ?>
-    <?php echo $form->error($model,'pre_image'); ?>
-  </div>
-
   
-
-  <div class="row">
-    <?php echo $form->labelEx($model,'create_time'); ?>
-    <?php echo $form->textField($model,'create_time'); ?>
-    <?php echo $form->error($model,'create_time'); ?>
-  </div>
-
-  <div class="row">
-    <?php echo $form->labelEx($model,'user_bk_id'); ?>
-    <?php echo $form->textField($model,'user_bk_id'); ?>
-    <?php echo $form->error($model,'user_bk_id'); ?>
-  </div>
--->
   <div class="row buttons">
     <?php echo CHtml::ajaxSubmitButton('Create Bookmark',CHtml::normalizeUrl(array('bookmark/ajaxcreate')),array('type'=>'post',
             'dataType'=>'json',
