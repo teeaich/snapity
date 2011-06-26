@@ -42,7 +42,7 @@
         // reload the autoload function from Yii to achieve previous status
         spl_autoload_register(array('YiiBase','autoload'));
 
-        return $job->status->id.'.jpg';
+        return $job->status->id;
         
         
       }  catch (Exception $e) {
