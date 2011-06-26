@@ -73,6 +73,7 @@
       //$model=Bookmark::model()->findByPk((int)'87');   
 
       $model->snapshot = snapshot;
+      $model->webthumbID = snapshot;
       $model->save();
       
     }
