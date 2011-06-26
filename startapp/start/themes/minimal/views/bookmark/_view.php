@@ -5,14 +5,14 @@
   
   <?php 
     $image_href = CHtml::encode($data->link);
-    $imageLink = 'images/bk_preview/'.$data->pre_image;
+    $imageLink = 'images/bk_preview/'.$data->snapshot;
     
     echo CHtml::openTag('a',array(
       'href'=>$image_href,
       'target'=>'_blank',
                   ));
     echo CHtml::openTag('img',array(
-      'class'=>$data->pre_image === 'loading.gif'? '':'placeholder',
+      'class'=>$data->snapshot === 'loading.gif'? '':'placeholder',
       'src'=>$imageLink,
                   ));
     echo CHtml::closeTag('img');
