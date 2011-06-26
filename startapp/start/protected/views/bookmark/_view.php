@@ -8,7 +8,7 @@
   <?php 
     $image_href = CHtml::encode($data->link);
     $imageLink = 'images/'
-                           .Yii::app()->user->id.'/'.$data->pre_image;
+                           .Yii::app()->user->id.'/'.$data->snapshot;
     echo CHtml::openTag('a',array(
       'href'=>$image_href,
       'target'=>'_blank',
