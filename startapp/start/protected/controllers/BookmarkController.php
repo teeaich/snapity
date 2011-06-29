@@ -37,7 +37,7 @@
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
               'actions'=>array('create','update','admin','delete','ajaxcreate','index','view',
-                  'getBookmarkTitle','getBookmarkOptions'),
+                  'getBookmarkTitle','getBookmarkOptions','getBigImage'),
               'users'=>array('@'),
               
              ),
@@ -81,8 +81,17 @@
     public function actionGetBigImage()
     {
         $model = new Bookmark;
-        $model = Bookmark::model()->findByPk((int)$_POST['id']);
-        
+        $model = Bookmark::model()->findByPk((int)$_GET['id']);
+        //$model = Bookmark::model()->findByPk((int)'188');
+        $webthumbID = $model->webthumbID;
+        $job = new webThumbJob();
+        $snapshot = $job->getBigImage($webthumbID,'large');
+        $path=Yii::app()->basePath;
+        header("Content-Type: image/jpeg", true);
+        //echo CHtml::image($snapshot);
+        //echo "<img src='".Yii::app()->getimg->readImage($snapshot)."'>";
+
+        echo $snapshot;
     }
     
     public function actionRunWorker()

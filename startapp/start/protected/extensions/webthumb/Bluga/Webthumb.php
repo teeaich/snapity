@@ -456,6 +456,26 @@ class Bluga_Webthumb {
     } // public function fetchAll()
 
 
+    public function fetchToReturn($job,$size=null)
+    {
+        
+
+        if (is_null($size)) {
+            $size = 'small';
+            if (isset($job->size)) {
+                $size = $job->size;
+            }
+        }
+
+        $request = new Bluga_Webthumb_Request_Fetch($job,$size);
+        $request->apikey = $this->apiKey;
+        $payload = $request->asXML();
+
+        $image = $this->_transmitRequest($payload);
+        return $image->body;
+        
+    }
+
     /**
      * fetches the given jobid and stores it on the filesystem in the filename
      * specified.

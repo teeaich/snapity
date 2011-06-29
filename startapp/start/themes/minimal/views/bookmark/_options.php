@@ -12,6 +12,9 @@ $(document).ready(function(){
         
         gotID = $(this).closest('.tooltip').attr('id');
         var loadUrl = "index.php?r=bookmark/delete&id="+gotID+""; 
+        // to prevent error message when mousecursor fires event to load 
+        // getBookmarkTitle again
+        $('#'+gotID+'').unbind();
         $('.message').load(loadUrl,{'id':gotID},function(response, status, xhr) {
             if (status == "error") {
                 var msg = "error deleting: ";
@@ -29,14 +32,15 @@ $(document).ready(function(){
     
     $(".optionsEditImage").click(function(){
         $("#dialogEditImage").dialog('open');
-        var loadUrl = "index.php?r=bookmark/GetBigImage";
         gotID = $(this).closest('.tooltip').attr('id');
-        $("#dialogEditImage").html(ajax_load).load(loadUrl,{'id':gotID},function(response, status, xhr) {
-            if (status == "error") {
-                var msg = "error loading image: ";
-                $(this).html(msg + xhr.status + " ");
-            }
+        var loadUrl = "index.php?r=bookmark/GetBigImage&id="+gotID+"";
+        $("#dialogEditImage").append('<img id="bigImage"/>');
+        $("#bigImage").attr('src',loadUrl);
+        $("#bigImage").axzoomer({
+            'maxZoom':4,
+            'sensivity':10
         });
+        
     });
 });
 

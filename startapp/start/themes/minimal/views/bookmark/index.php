@@ -1,18 +1,8 @@
 <?php Yii::app()->clientScript->registerCoreScript('jquery');?>
 <script type="text/javascript" src="/startapp/start/themes/minimal/js/corner.js"></script>
 <script src="/startapp/start/themes/minimal/js/jquery.tools.min.js"></script>
-<?php
-  /*$this->breadcrumbs=array(
-  'Bookmarks',
-  );*/
-$this->menu=array(
-  array('label'=>'Create Bookmark', 'url'=>array('create')),
-  array('label'=>'Create AjaxBookmark','url'=>array('ajaxcreate')),
-  array('label'=>'Manage Bookmark', 'url'=>array('admin')),
-);
-?>
-
-<!--<h1>Bookmarks</h1>-->
+<script src="/startapp/start/themes/minimal/js/jquery.mousewheel.js"></script>
+<script src="/startapp/start/themes/minimal/js/axzoomer1.4.js"></script>
 
 <?php $this->widget('zii.widgets.CListView', array(
   'dataProvider'=>$dataProvider,
@@ -83,11 +73,24 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
 
 
 <script type="text/javascript">
+$.ajaxSetup ({  
+    cache: false  
+});  
     
 // global var js
 var ajax_load = "<img src='themes/minimal/images/load.gif' alt='loading...' />"; 
+
     
 var animateIn = function animateIn() {
+    //checks if a headerbox is still open from a previous imagebox
+    $('.tooltip').each(function() {
+        if ($(this).css("height") != '40px') {
+            animateOut();
+            $(this).animate({"height":"40px"},100);
+            return;
+        } else return;
+    });// end check
+    
     gotID = $(this).attr('id');
     
     $('#'+gotID+'').animate({"height" : "188px"},300,cursorOut);   
@@ -144,11 +147,41 @@ $(document).ready(function(){
     // the imagebox. 
     
     $("div.view").tooltip({ offset: [-19, -250], opacity: 0.7,effect: 'bouncy'});
-    $.ajaxSetup ({  
-        cache: false  
-    });  
+    
     // when click event is captured animateIn callback is starting look above
     $(".tooltip").click(animateIn);
+    
+    /*$(".optionsDelete").click(function(){
+        
+        gotID = $(this).closest('.tooltip').attr('id');
+        var loadUrl = "index.php?r=bookmark/delete&id="+gotID+""; 
+        $('.message').load(loadUrl,{'id':gotID},function(response, status, xhr) {
+            if (status == "error") {
+                var msg = "error deleting: ";
+                $(this).html(msg + xhr.status + " ");
+                }
+            if (status == "success") {
+                $(this).closest('.tooltip').hide();
+                $('#'+gotID+'').prev().slideUp(500,function(){
+                    $(this).next().remove();
+                    $(this).remove();
+                });
+            }
+        });
+    });*/
+    
+    /*$(".optionsEditImage").click(function(){
+        $("#dialogEditImage").dialog('open');
+        gotID = $(this).closest('.tooltip').attr('id');
+        var loadUrl = "index.php?r=bookmark/GetBigImage&id="+gotID+"";
+        $("#dialogEditImage").append('<img id="bigImage"/>');
+        $("#bigImage").attr('src',loadUrl);
+    });
+    $("#bigImage").axzoomer({
+	'maxZoom':4,
+	'opacity':0.5,
+	'sensivity':10
+    });*/
 });
 </script>
 
