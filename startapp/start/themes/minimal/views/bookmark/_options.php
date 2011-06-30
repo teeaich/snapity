@@ -1,8 +1,7 @@
 <div class="optionsTitle"><?php echo CHtml::encode($model->title);?></div>
 <div class="optionsButtons">
-    <div class="optionsEditImage">Edit</div>
-    <div class="optionsDelete">Delete</div>
-<div class="message">for info</div>
+    <div class="optionsEditImage"><span class="mainButtonText">Edit</span></div>
+    <div class="optionsDelete"><span class="mainButtonText">Delete</span></div>
 </div>
 
 <script type="text/javascript">
