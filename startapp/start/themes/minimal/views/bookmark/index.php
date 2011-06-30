@@ -8,10 +8,6 @@
   'dataProvider'=>$dataProvider,
   'itemView'=>'_view',
   'template'=> '{items}{pager}'
-  //nicht mehr notwenig da imagelink in bookmark controller nun definiert ist
-  //'viewData'=> array (
-  //'imageLink' => Config::getConfigValue('image_provider_link'),
-  //                 ),
 )); 
   
 ?>
@@ -47,7 +43,7 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
         'title'=>'Create Bookmark',
         'autoOpen'=>false,
         'modal'=>true,
-        'width'=>550,
+        'width'=>600,
         'height'=>300,
         
     ),
@@ -67,7 +63,16 @@ $this->beginWidget('zii.widgets.jui.CJuiDialog', array( // the dialog
         
     ),
 ));?>
-<div id="divForEditImage"></div>
+<div id="divForEditImage">
+    <form action="index.php?r=bookmark/crop" method="post">
+        <input type="hidden" name="top" value="" />
+        <input type="hidden" name="left" value="" />
+        <input type="hidden" name="width" value="" />
+        <input type="hidden" name="height" value="" />
+        <input type="hidden" name="id" value="" />
+        <input class="sendButton" type="submit" name="submit" value="Crop it!" />
+    </form>
+</div>
  
 <?php $this->endWidget();?>
 
@@ -151,37 +156,7 @@ $(document).ready(function(){
     // when click event is captured animateIn callback is starting look above
     $(".tooltip").click(animateIn);
     
-    /*$(".optionsDelete").click(function(){
-        
-        gotID = $(this).closest('.tooltip').attr('id');
-        var loadUrl = "index.php?r=bookmark/delete&id="+gotID+""; 
-        $('.message').load(loadUrl,{'id':gotID},function(response, status, xhr) {
-            if (status == "error") {
-                var msg = "error deleting: ";
-                $(this).html(msg + xhr.status + " ");
-                }
-            if (status == "success") {
-                $(this).closest('.tooltip').hide();
-                $('#'+gotID+'').prev().slideUp(500,function(){
-                    $(this).next().remove();
-                    $(this).remove();
-                });
-            }
-        });
-    });*/
-    
-    /*$(".optionsEditImage").click(function(){
-        $("#dialogEditImage").dialog('open');
-        gotID = $(this).closest('.tooltip').attr('id');
-        var loadUrl = "index.php?r=bookmark/GetBigImage&id="+gotID+"";
-        $("#dialogEditImage").append('<img id="bigImage"/>');
-        $("#bigImage").attr('src',loadUrl);
-    });
-    $("#bigImage").axzoomer({
-	'maxZoom':4,
-	'opacity':0.5,
-	'sensivity':10
-    });*/
+   
 });
 </script>
 

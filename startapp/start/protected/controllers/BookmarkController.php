@@ -37,7 +37,7 @@
              ),
         array('allow', // allow authenticated user to perform 'create' and 'update' actions
               'actions'=>array('create','update','admin','delete','ajaxcreate','index','view',
-                  'getBookmarkTitle','getBookmarkOptions','getBigImage'),
+                  'getBookmarkTitle','getBookmarkOptions','getBigImage','crop'),
               'users'=>array('@'),
               
              ),
@@ -92,6 +92,42 @@
         //echo "<img src='".Yii::app()->getimg->readImage($snapshot)."'>";
 
         echo $snapshot;
+    }
+    
+    public function actionCrop() {
+        $origWidth = '640';
+        $origHeight = '480';
+        
+        
+        
+        $top = (rtrim ($_POST['top'], 'px')) * -1;
+        $left = (rtrim ($_POST['left'], 'px')) * -1;
+        $width = rtrim ($_POST['width'], 'px');
+        $height = rtrim ($_POST['height'], 'px');
+        $ratio = $origWidth/$width;        
+        
+        
+        $model = new Bookmark;
+        $model = Bookmark::model()->findByPk((int)$_POST['id']);
+        
+        $path=Yii::app()->basePath.'/../images/bk_preview/';
+        $webthumbID = $model->webthumbID;
+        $job = new webThumbJob();
+        $srcBigImage = $job->getBigImage($webthumbID,'large');
+        
+        
+        $dstImagePath = $path.''.$model->webthumbID.'-new.jpg';
+
+        $srcImage = imagecreatefromstring($srcBigImage);
+        $blankCropImage = imagecreatetruecolor($origWidth,$origHeight);
+        imagecopyresized($blankCropImage, $srcImage,0,0, $ratio*$left, $ratio*$top,
+                                                  $origWidth,$origHeight,
+                                                  $ratio*$origWidth,
+                                                  $ratio*$origHeight);
+        imagejpeg($blankCropImage, $dstImagePath);
+        $model->snapshot = $webthumbID.'-new.jpg';
+        $model->save();
+        $this->redirect(array('index'));
     }
     
     public function actionRunWorker()
@@ -314,7 +350,7 @@
     */
     public function actionIndex()
     {
-
+      
       Yii::import('ext.runactions.components.ERunActions');
       //ERunActions::touchUrlExt('http://teeaich.kodingen.com/yii/start/index.php?r=bookmark/runWorker');
       $dataProvider=new CActiveDataProvider(Bookmark::model()->userBookmarks());
