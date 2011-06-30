@@ -50,8 +50,7 @@
       try {
         $webthumb = new Bluga_Webthumb();
         $webthumb->setApiKey($this->_APIKEY);
-        $job = $webthumb->addUrl($this->_link,'custom', 1024, 768);
-        $job->options->customThumbnail = array('width' => 250, 'height' => 188); 
+        $job = $webthumb->addUrl($this->_link,'large', 1024, 768);
         $webthumb->submitRequests();
         
         while (!$webthumb->readyToDownload()) {
