@@ -24,6 +24,7 @@ return array(
     'application.components.*',
     'ext.eoauth.*',
     'ext.eoauth.lib.*',
+    'ext.mtHeader.*',
     //'ext.runactions.components.*',
     
     
