@@ -14,6 +14,7 @@
     echo CHtml::openTag('img',array(
       'class'=>$data->snapshot === 'loading.gif'? '':'placeholder',
       'src'=>$imageLink,
+      'style'=> 'width:250px; height:188px;'
                   ));
     echo CHtml::closeTag('img');
     echo CHtml::closeTag('a'); 
