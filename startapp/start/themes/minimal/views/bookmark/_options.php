@@ -2,13 +2,15 @@
 <div class="optionsButtons">
     <div class="optionsEditImage"><span class="mainButtonText">Edit</span></div>
     <div class="optionsDelete"><span class="mainButtonText">Delete</span></div>
+<div class="message" type="hidden"></div>
+
 </div>
 
 <script type="text/javascript">
 
 $(document).ready(function(){
     $(".optionsDelete").click(function(){
-        
+
         gotID = $(this).closest('.tooltip').attr('id');
         var loadUrl = "index.php?r=bookmark/delete&id="+gotID+""; 
         // to prevent error message when mousecursor fires event to load 
